@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+    flask-app:
+        build: ./
+        ports:
+            - 5000:5000
+        volumes:
+            - ./app.py:/app/app.py
+        
+    mongodb: 
+        image: mongo
+        container_name: mongodb
+        environment: 
+            - PUID=1000
+            - PGID=1000
+        volumes: 
+            /root/passion/mongodb_data:/data/db
+        ports:
+            27017:27017
