@@ -15,6 +15,6 @@ services:
             - PUID=1000
             - PGID=1000
         volumes: 
-            /root/passion/mongodb_data:/data/db
+            - /root/passion/mongodb_data:/data/db
         ports:
-            27017:27017
+            - 27017:27017
