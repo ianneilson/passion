@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello_world():
     return Response("{'demo': 'successful!'}", status=200, mimetype='application/json')
 
-@app.route('/hello/<name>')
+@app.route('/hello/<myname>')
 def hello_name(myname):
     return Response("{'YourName': '" + str(myname) + "'}", status=200, mimetype='application/json')
 
